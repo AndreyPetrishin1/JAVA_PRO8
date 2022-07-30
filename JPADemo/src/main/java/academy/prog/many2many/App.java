@@ -19,13 +19,14 @@ public class App {
 
                 Client client1 = new Client("Andrey", 35);
                 Client client2 = new Client("Vika", 28);
+                Client client3 = new Client("Vka", 23);
 
                 Product product1 = new Product("Phone", 123L);
                 Product product2 = new Product("Desctop", 34543L);
+                Product product3 = new Product("Descp", 345L);
 
 
 
-                
                 client1.addCourse(product1);
 
                 client1.addCourse(product2);
@@ -38,6 +39,8 @@ public class App {
 
                     em.persist(client1);
                     em.persist(client2);
+                    em.persist(client3);
+                    em.persist(product3);
 
                     em.getTransaction().commit();
                 } catch (Exception ex) {
